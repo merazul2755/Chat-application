@@ -37,7 +37,7 @@ export const conversationsApi = apiSlice.injectEndpoints({
                 // eslint-disable-next-line eqeqeq
                 (c) => c.id == data?.data?.id
               );
-
+              // console.log(data);
               if (conversation?.id) {
                 conversation.message = data?.data?.message;
                 conversation.timestamp = data?.data?.timestamp;
@@ -103,7 +103,7 @@ export const conversationsApi = apiSlice.injectEndpoints({
                 "getConversations",
                 arg.sender,
                 (draft) => {
-                  console.log(conversation.data);
+                  // console.log(conversation.data);
                   draft.data.push(conversation.data);
                   draft.data.sort((a, b) => b.timestamp - a.timestamp);
                 }
