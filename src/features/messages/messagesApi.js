@@ -17,7 +17,7 @@ export const messagesApi = apiSlice.injectEndpoints({
         arg,
         { updateCachedData, cacheDataLoaded, cacheEntryRemoved }
       ) {
-        // console.log("hello");
+        console.log(arg);
         // create socket
         const socket = io(`${process.env.REACT_APP_API_URL}`, {
           reconnectionDelay: 1000,
