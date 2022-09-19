@@ -68,7 +68,7 @@ export default function ChatBody() {
           next={fetchMore}
           hasMore={hasMore}
           loader={<h4>Loading...</h4>}
-          height={window.innerHeight - 195}
+          height={window.innerHeight - 200}
         >
           <Messages messages={messages} />
         </InfiniteScroll>
